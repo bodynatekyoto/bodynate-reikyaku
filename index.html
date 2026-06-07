@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>整体×脂肪冷却 | BodyNate 四条烏丸店</title>
+  <meta name="description" content="理学療法士在籍の女性専用サロン。骨格を整える整体と、気になる部位の脂肪冷却を同日施術。京都・四条烏丸で「引き締まった、自信のある体」を。" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --charcoal:     #2A2A2A;
+      --charcoal-mid: #3D3D3D;
+      --charcoal-soft:#555555;
+      --rose:         #C4747E;
+      --rose-mid:     #A85C66;
+      --rose-light:   #EDD4D7;
+      --rose-pale:    #FBF3F4;
+      --gold:         #C9954A;
+      --gold-mid:     #A87A38;
+      --gold-light:   #EDD9B8;
+      --gold-pale:    #FBF7EF;
+      --ice:          #5BA3C9;
+      --ice-mid:      #3A7FA8;
+      --ice-light:    #C2DFF0;
+      --ice-pale:     #EFF7FC;
+      --off-white:    #FAF8F6;
+      --white:        #FFFFFF;
+      --text:         #2A2A2A;
+      --text-mid:     #555555;
+      --text-light:   #888888;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', Georgia, serif;
+      color: var(--text);
+      background: var(--off-white);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 300;
+      background: var(--charcoal);
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      border-bottom: 1px solid rgba(91,163,201,0.2);
+    }
+    .nav-logo {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .nav-logo-accent { color: var(--rose); }
+    .nav-logo-sub {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.35);
+      font-weight: 400;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+    .nav-cta {
+      background: var(--rose);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 9px 20px;
+      border-radius: 3px;
+      letter-spacing: 0.08em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--rose-mid); }
+
+    /* ─── HERO ─── */
+    .hero {
+      margin-top: 64px;
+      min-height: 95vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(to right,
+          rgba(30,38,48,0.95) 0%,
+          rgba(30,38,48,0.78) 52%,
+          rgba(30,38,48,0.25) 100%),
+        url('images/reikyaku.jpg') center 40% / cover no-repeat;
+      position: relative;
+      overflow: hidden;
+      padding: 80px 64px 100px;
+    }
+
+    .hero-inner { position: relative; z-index: 1; max-width: 660px; }
+
+    .hero-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid rgba(201,149,74,0.6);
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      padding: 5px 16px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .hero-badge.ice {
+      border-color: rgba(91,163,201,0.6);
+      color: var(--ice-light);
+    }
+    .hero-badge.rose {
+      border-color: rgba(196,116,126,0.6);
+      color: var(--rose-light);
+    }
+    .hero-badge-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .hero-badge.ice .hero-badge-dot { background: var(--ice); }
+    .hero-badge.rose .hero-badge-dot { background: var(--rose); }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 56px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.45;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+    .hero h1 .en {
+      display: block;
+      font-size: clamp(10px, 1.1vw, 12px);
+      letter-spacing: 0.32em;
+      color: rgba(255,255,255,0.35);
+      font-weight: 400;
+      margin-bottom: 12px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .hero h1 .ar { color: var(--rose); }
+    .hero h1 .ai { color: var(--ice-light); }
+
+    .hero-divider {
+      width: 44px; height: 2px;
+      background: linear-gradient(to right, var(--rose), var(--ice));
+      margin: 26px 0;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
+      line-height: 2.2;
+      margin-bottom: 40px;
+    }
+
+    /* ─── 2 CTA BUTTONS ─── */
+    .cta-2btn {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-reserve-main {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      background: linear-gradient(135deg, #E07888 0%, #C4747E 50%, #A85468 100%);
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 13px 48px;
+      letter-spacing: 0.1em;
+      border-radius: 4px;
+      transition: all 0.3s;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      box-shadow: 0 6px 28px rgba(196,116,126,0.55), 0 0 0 2px rgba(255,255,255,0.28), 0 0 0 5px rgba(196,116,126,0.35);
+      border: 1.5px solid rgba(255,255,255,0.42);
+      min-width: 220px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .btn-reserve-main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.14) 0%, transparent 55%);
+      pointer-events: none;
+      border-radius: 4px;
+    }
+    .btn-reserve-main:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(196,116,126,0.65);
+    }
+
+    .btn-line-official {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #06C755;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 16px 28px;
+      letter-spacing: 0.08em;
+      border-radius: 4px;
+      transition: all 0.3s;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .btn-line-official:hover { background: #05b04c; transform: translateY(-2px); }
+
+    .line-icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+    .btn-price-sub {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      opacity: 0.85;
+      margin-top: 5px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+
+    /* ─── SCARCITY BAR ─── */
+    .scarcity-wrap { margin-top: 16px; }
+    .scarcity-track {
+      height: 3px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .scarcity-fill {
+      height: 100%;
+      width: 35%;
+      background: linear-gradient(to right, var(--rose), var(--ice));
+      border-radius: 2px;
+    }
+    .scarcity-text {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+    .scarcity-text strong { color: #FFD88A; font-weight: 700; }
+
+    .no-push-note {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.08em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    /* ─── TRUST BAR ─── */
+    .trust-bar {
+      background: var(--charcoal-mid);
+      padding: 22px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(91,163,201,0.15);
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .trust-icon {
+      width: 32px; height: 32px;
+      background: rgba(91,163,201,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .trust-text {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.08em;
+      line-height: 1.5;
+    }
+    .trust-text strong {
+      display: block;
+      font-size: 13px;
+      color: var(--ice-light);
+      font-weight: 700;
+    }
+
+    /* ─── SECTION BASE ─── */
+    section { padding: 96px 24px; }
+    .section-inner { max-width: 920px; margin: 0 auto; }
+    .section-inner-sm { max-width: 760px; margin: 0 auto; }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.38em;
+      color: var(--rose);
+      text-align: center;
+      margin-bottom: 14px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      text-transform: uppercase;
+    }
+    .eyebrow.gold { color: var(--gold); }
+    .eyebrow.ice { color: var(--ice); }
+
+    .section-title {
+      font-size: clamp(22px, 3.5vw, 36px);
+      font-weight: 700;
+      color: var(--charcoal);
+      text-align: center;
+      line-height: 1.55;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    .section-title .ar { color: var(--rose); }
+    .section-title .ag { color: var(--gold); }
+    .section-title .ai { color: var(--ice); }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 18px auto 56px;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      display: block;
+      width: 52px; height: 1px;
+      background: var(--rose-light);
+    }
+    .divider.ice-divider::before, .divider.ice-divider::after {
+      background: var(--ice-light);
+    }
+    .divider-gem {
+      width: 8px; height: 8px;
+      background: var(--rose);
+      transform: rotate(45deg);
+    }
+    .divider.ice-divider .divider-gem { background: var(--ice); }
+
+    /* ─── CONCEPT BAND ─── */
+    .concept-band {
+      background: var(--white);
+      padding: 88px 24px;
+      text-align: center;
+    }
+    .concept-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.38em;
+      color: var(--ice);
+      margin-bottom: 20px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      text-transform: uppercase;
+    }
+    .concept-title {
+      font-size: clamp(26px, 4vw, 44px);
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.55;
+      letter-spacing: 0.04em;
+      margin-bottom: 36px;
+    }
+    .concept-title .ai { color: var(--ice); }
+    .concept-title .ag { color: var(--gold); }
+    .concept-body {
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 2.2;
+      margin-bottom: 36px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .concept-body strong { color: var(--charcoal); font-weight: 700; }
+    .concept-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .concept-tag {
+      background: var(--ice-pale);
+      border: 1px solid var(--ice-light);
+      color: var(--ice-mid);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      padding: 7px 20px;
+      border-radius: 50px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .concept-tag.rose-tag {
+      background: var(--rose-pale);
+      border-color: var(--rose-light);
+      color: var(--rose-mid);
+    }
+
+    /* ─── PHILOSOPHY BAND ─── */
+    .philosophy {
+      background: var(--charcoal);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .philosophy::before {
+      content: '';
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      left: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      opacity: 0.04;
+      background: var(--rose);
+    }
+    .philosophy::after {
+      content: '';
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      opacity: 0.04;
+      background: var(--ice);
+    }
+    .philosophy-kana {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: rgba(255,255,255,0.3);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      margin-bottom: 22px;
+    }
+    .philosophy-quote {
+      font-size: clamp(20px, 3.2vw, 34px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+    }
+    .philosophy-quote .ar { color: var(--rose); }
+    .philosophy-quote .ai { color: var(--ice-light); }
+    .philosophy-sub {
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.1em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+
+    /* ─── PAIN ─── */
+    .pain { background: var(--white); }
+    .pain-intro {
+      text-align: center;
+      font-size: 16px;
+      color: var(--text-mid);
+      margin-bottom: 44px;
+      line-height: 2.0;
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 52px;
+    }
+    .pain-card {
+      background: var(--rose-pale);
+      border: 1px solid var(--rose-light);
+      border-left: 3px solid var(--rose);
+      padding: 20px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      border-radius: 0 3px 3px 0;
+    }
+    .pain-card.ice-card {
+      background: var(--ice-pale);
+      border-color: var(--ice-light);
+      border-left-color: var(--ice);
+    }
+    .pain-check {
+      width: 20px; height: 20px;
+      background: var(--rose);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .pain-card.ice-card .pain-check { background: var(--ice); }
+    .pain-check::after {
+      content: '✓';
+      color: white;
+      font-size: 11px;
+      font-family: sans-serif;
+      font-weight: 700;
+    }
+    .pain-text { font-size: 15px; line-height: 1.6; }
+
+    .pain-answer {
+      background: var(--charcoal);
+      border-radius: 4px;
+      padding: 32px 40px;
+      text-align: center;
+    }
+    .pain-answer-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.4);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      margin-bottom: 14px;
+    }
+    .pain-answer-text {
+      font-size: clamp(17px, 2.5vw, 22px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.7;
+      letter-spacing: 0.04em;
+    }
+    .pain-answer-text .ar { color: var(--rose); }
+    .pain-answer-text .ai { color: var(--ice-light); }
+
+    /* ─── TWO SERVICE CARDS ─── */
+    .services { background: var(--off-white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 28px rgba(42,42,42,0.1);
+    }
+    .service-card-img {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .service-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(20,20,20,0.6) 100%);
+    }
+    .service-card-badge {
+      position: absolute;
+      top: 16px; left: 16px;
+      z-index: 2;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      padding: 5px 14px;
+      border-radius: 2px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .service-card-badge.rose { background: var(--rose); color: white; }
+    .service-card-badge.ice { background: var(--ice); color: white; }
+    .service-card-body {
+      padding: 28px 24px 32px;
+    }
+    .service-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      letter-spacing: 0.04em;
+    }
+    .service-card-title .ar { color: var(--rose); }
+    .service-card-title .ai { color: var(--ice); }
+    .service-card-sub {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--text-light);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      margin-bottom: 16px;
+    }
+    .service-card-text {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 2.0;
+      margin-bottom: 16px;
+    }
+    .service-card-points {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .service-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--charcoal);
+    }
+    .service-point-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--rose);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+    .service-point-dot.ice { background: var(--ice); }
+
+    /* ─── SYNERGY ─── */
+    .synergy-box {
+      background: linear-gradient(135deg, rgba(91,163,201,0.08) 0%, rgba(196,116,126,0.08) 100%);
+      border: 1px solid rgba(91,163,201,0.2);
+      border-radius: 10px;
+      padding: 40px 48px;
+      text-align: center;
+    }
+    .synergy-title {
+      font-size: clamp(18px, 2.5vw, 26px);
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+      line-height: 1.6;
+      letter-spacing: 0.04em;
+    }
+    .synergy-title .ar { color: var(--rose); }
+    .synergy-title .ai { color: var(--ice); }
+    .synergy-text {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 2.2;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+    .synergy-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .synergy-pill {
+      background: var(--white);
+      border-radius: 50px;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      box-shadow: 0 2px 12px rgba(42,42,42,0.1);
+    }
+    .synergy-pill.rose-pill { color: var(--rose-mid); border: 1.5px solid var(--rose-light); }
+    .synergy-pill.ice-pill { color: var(--ice-mid); border: 1.5px solid var(--ice-light); }
+    .synergy-plus {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .synergy-arrow {
+      font-size: 22px;
+      color: var(--gold);
+    }
+    .synergy-result {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--charcoal);
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 50px;
+      padding: 12px 32px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    /* ─── MINI CTA ─── */
+    .mini-cta {
+      background: var(--charcoal);
+      padding: 52px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      border-top: 1px solid rgba(91,163,201,0.18);
+      border-bottom: 1px solid rgba(91,163,201,0.18);
+    }
+    .mini-cta-msg {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      line-height: 1.65;
+    }
+    .mini-cta-msg .ar { color: var(--rose); }
+    .mini-cta-msg .ag { color: var(--gold); }
+    .mini-cta-msg .ai { color: var(--ice-light); }
+    .mid-cta-3btn { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .mid-cta-3btn-sub { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .btn-quick {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 15px 28px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.35);
+      letter-spacing: 0.08em;
+      transition: all 0.2s;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .btn-quick:hover { border-color: white; color: white; }
+
+    /* mobile-only line break */
+    .sp-br { display: none; }
+    @media (max-width: 640px) { .sp-br { display: block; } }
+
+    /* ─── APPROACH STEPS ─── */
+    .approach { background: var(--white); }
+    .approach-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .approach-card {
+      position: relative;
+      min-height: 320px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+    }
+    .approach-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(20,20,20,0.1) 0%, rgba(20,20,20,0.85) 100%);
+      border-radius: 10px;
+    }
+    .approach-step-badge {
+      position: absolute;
+      top: 20px; left: 20px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px 14px;
+      letter-spacing: 0.26em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      border-radius: 2px;
+      z-index: 2;
+      backdrop-filter: blur(4px);
+    }
+    .approach-step-badge.ice { border-color: rgba(91,163,201,0.5); background: rgba(91,163,201,0.15); }
+    .approach-step-watermark {
+      position: absolute;
+      right: 20px; bottom: 16px;
+      font-size: 110px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.055);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+    }
+    .approach-content {
+      position: relative;
+      z-index: 2;
+      padding: 28px 32px 36px;
+      width: 100%;
+    }
+    .approach-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+    }
+    .approach-title .ar { color: #f0a0aa; }
+    .approach-title .ai { color: var(--ice-light); }
+    .approach-title .ag { color: var(--gold-light); }
+    .approach-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.95;
+    }
+    .approach-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+    .approach-connector-line {
+      width: 1px;
+      height: 24px;
+      background: linear-gradient(to bottom, rgba(91,163,201,0.3), rgba(91,163,201,0.8));
+    }
+    .approach-connector-gem {
+      width: 10px; height: 10px;
+      background: var(--ice);
+      transform: rotate(45deg);
+      margin: 3px 0;
+    }
+
+    /* ─── STAFF ─── */
+    .staff { background: var(--off-white); }
+    .staff-inner {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .staff-photo {
+      aspect-ratio: 3/4;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .staff-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .staff-photo-bar {
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(to bottom, var(--rose), var(--ice));
+    }
+    .staff-license {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      padding: 7px 18px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .staff-license-icon {
+      width: 16px; height: 16px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .staff-license-icon::after { content: '★'; color: white; font-size: 9px; }
+    .staff-license-text {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--gold-mid);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      font-weight: 700;
+    }
+    .staff-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--charcoal);
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+    .staff-name-en {
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      color: var(--text-light);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      margin-bottom: 20px;
+    }
+    .staff-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .staff-tag {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--rose-mid);
+      border: 1px solid var(--rose-light);
+      padding: 4px 12px;
+      border-radius: 2px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .staff-tag.ice-tag {
+      color: var(--ice-mid);
+      border-color: var(--ice-light);
+    }
+    .staff-message {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 2.0;
+    }
+    .staff-message .quote {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--charcoal);
+      display: block;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+    .staff-message .quote .ar { color: var(--rose); }
+
+    /* ─── VOICE ─── */
+    .voice { background: var(--white); }
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .voice-card {
+      background: var(--off-white);
+      border-radius: 4px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 16px rgba(42,42,42,0.05);
+      position: relative;
+    }
+    .voice-card::before {
+      content: '"';
+      position: absolute;
+      top: 16px; left: 20px;
+      font-size: 56px;
+      color: var(--ice-light);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .voice-tag {
+      display: inline-block;
+      background: var(--ice-pale);
+      color: var(--ice-mid);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 2px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      margin-bottom: 14px;
+    }
+    .voice-result {
+      background: var(--gold-pale);
+      border-left: 3px solid var(--gold);
+      padding: 8px 14px;
+      font-size: 13px;
+      color: var(--gold-mid);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 16px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .voice-text {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--text-mid);
+      margin-bottom: 18px;
+      padding-top: 8px;
+    }
+    .voice-meta {
+      font-size: 12px;
+      color: var(--text-light);
+      letter-spacing: 0.06em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+
+    /* ─── MID CTA ─── */
+    .mid-cta {
+      background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-mid) 100%);
+      padding: 72px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .mid-cta::before {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: var(--ice);
+      opacity: 0.04;
+    }
+    .mid-cta-title {
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+      letter-spacing: 0.04em;
+    }
+    .mid-cta-title .ar { color: var(--rose); }
+    .mid-cta-title .ag { color: var(--gold); }
+    .mid-cta-title .ai { color: var(--ice-light); }
+    .mid-cta-sub {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 36px;
+      line-height: 2.0;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      letter-spacing: 0.06em;
+    }
+    .mid-cta-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* ─── PRICING ─── */
+    .menu { background: var(--off-white); }
+    .menu-note {
+      font-size: 12px;
+      color: var(--text-light);
+      text-align: center;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      letter-spacing: 0.04em;
+      margin-top: 20px;
+      line-height: 2.0;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 8px;
+      align-items: start;
+    }
+    .price-card {
+      background: var(--white);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(42,42,42,0.09);
+      display: flex;
+      flex-direction: column;
+    }
+    .price-card-head {
+      padding: 28px 20px 20px;
+      background: var(--charcoal);
+      text-align: center;
+    }
+    .price-card--trial .price-card-head {
+      background: linear-gradient(135deg, #4A2428 0%, #2A2A2A 100%);
+      border-bottom: 2px solid var(--rose);
+    }
+    .price-card--ice .price-card-head {
+      background: linear-gradient(135deg, #1C3040 0%, #2A2A2A 100%);
+      border-bottom: 2px solid var(--ice);
+    }
+    .price-card--set .price-card-head {
+      background: linear-gradient(135deg, #3D3020 0%, #2A2A2A 100%);
+      border-bottom: 2px solid var(--gold);
+    }
+    .price-badge {
+      display: inline-block;
+      background: var(--rose);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.12em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      margin-bottom: 12px;
+    }
+    .price-badge--ice { background: var(--ice); }
+    .price-badge--gold { background: var(--gold); }
+    .price-card-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    .price-card-time {
+      font-size: 11px;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.1em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .price-card-body {
+      padding: 24px 20px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      text-align: center;
+    }
+    .price-orig {
+      font-size: 12px;
+      color: var(--text-light);
+      text-decoration: line-through;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      margin-bottom: -8px;
+    }
+    .price-main {
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--charcoal);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      line-height: 1;
+    }
+    .price-card--trial .price-main { color: var(--rose-mid); }
+    .price-card--ice .price-main { color: var(--ice-mid); }
+    .price-card--set .price-main { color: var(--gold-mid); }
+    .price-main sup { font-size: 18px; }
+    .price-main sub { font-size: 13px; vertical-align: bottom; color: var(--text-light); font-weight: 400; }
+    .price-desc {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.9;
+      flex: 1;
+    }
+    .price-recommend {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 3px;
+      padding: 8px 14px;
+      font-size: 12px;
+      color: var(--gold-mid);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+
+    @media (max-width: 860px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+      .services-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── FLOW ─── */
+    .flow { background: var(--off-white); }
+    .flow-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0;
+    }
+    .flow-step {
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+    .flow-step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -10px;
+      top: 28px;
+      font-size: 18px;
+      color: var(--ice-light);
+      font-family: sans-serif;
+    }
+    .flow-num-circle {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .flow-num-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ice);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .flow-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      letter-spacing: 0.04em;
+    }
+    .flow-desc {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+
+    /* ─── FAQ ─── */
+    .faq { background: var(--white); }
+    .faq-item { border-bottom: 1px solid var(--ice-light); }
+    .faq-q {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 22px 0;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+    .faq-q-badge {
+      width: 26px; height: 26px;
+      background: var(--ice);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .faq-a {
+      padding: 0 0 22px 42px;
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.9;
+    }
+
+    /* ─── MAIN CTA ─── */
+    .main-cta {
+      background: var(--charcoal);
+      padding: 96px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .main-cta-deco {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(91,163,201,0.07) 0%, transparent 60%),
+        radial-gradient(circle at 80% 50%, rgba(196,116,126,0.05) 0%, transparent 60%);
+    }
+    .main-cta-inner { position: relative; z-index: 1; }
+    .main-cta-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.38em;
+      color: var(--ice-light);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      margin-bottom: 20px;
+    }
+    .main-cta-title {
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+    }
+    .main-cta-title .ar { color: var(--rose); }
+    .main-cta-title .ai { color: var(--ice-light); }
+    .main-cta-divider {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; margin: 20px auto 32px;
+    }
+    .main-cta-divider::before, .main-cta-divider::after {
+      content: ''; display: block;
+      width: 44px; height: 1px;
+      background: rgba(91,163,201,0.3);
+    }
+    .main-cta-divider-dot {
+      width: 6px; height: 6px;
+      background: var(--ice); border-radius: 50%;
+    }
+    .main-cta-price-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,149,74,0.3);
+      padding: 18px 36px;
+      border-radius: 4px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .main-cta-price-label {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      color: var(--gold-light);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .main-cta-price-orig {
+      font-size: 15px;
+      color: rgba(255,255,255,0.25);
+      text-decoration: line-through;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .main-cta-arrow { color: var(--gold); font-size: 18px; }
+    .main-cta-price-new {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--gold);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+    .main-cta-price-new sup { font-size: 18px; }
+    .main-cta-price-new sub { font-size: 15px; vertical-align: bottom; }
+    .main-cta-note {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.08em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      line-height: 2.0;
+    }
+
+    /* ─── ACCESS ─── */
+    .access { background: var(--off-white); }
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .access-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 22px;
+      letter-spacing: 0.04em;
+    }
+    .access-list { list-style: none; }
+    .access-list li {
+      display: flex;
+      gap: 22px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--ice-light);
+      font-size: 15px;
+    }
+    .al {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      white-space: nowrap;
+      min-width: 58px;
+      margin-top: 2px;
+    }
+    .av { color: var(--charcoal); line-height: 1.8; }
+    .access-map {
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .access-map iframe {
+      width: 100%; height: 100%;
+      border: 0; display: block;
+    }
+    .access-map-link {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--ice);
+      letter-spacing: 0.1em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      text-decoration: underline;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--charcoal);
+      padding: 44px 24px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .footer-logo span { color: var(--rose); }
+    .footer-sub {
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.14em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      margin-bottom: 22px;
+    }
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.1em;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+
+    /* ─── FLOAT BAR ─── */
+    .float-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 400;
+      background: rgba(30,38,48,0.97);
+      backdrop-filter: blur(8px);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+      border-top: 1px solid rgba(91,163,201,0.2);
+    }
+    .float-bar.visible { transform: translateY(0); }
+    .float-bar-info { text-align: right; }
+    .float-bar-label {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .float-bar-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold);
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .float-btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #E07888 0%, #C4747E 50%, #A85468 100%);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 4px;
+      letter-spacing: 0.06em;
+      transition: all 0.2s;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+      box-shadow: 0 4px 16px rgba(196,116,126,0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .float-btn-main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .float-btn-main:hover { transform: translateY(-1px); }
+    .float-btn-line {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: #06C755;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+      font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    .float-btn-line:hover { background: #05b04c; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 860px) {
+      .staff-inner { grid-template-columns: 1fr; }
+      .staff-photo { aspect-ratio: 2/1; max-height: 260px; }
+      .access-grid { grid-template-columns: 1fr; gap: 32px; }
+      .flow-wrap { grid-template-columns: 1fr 1fr; }
+      .synergy-connector { flex-direction: column; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 0 18px; }
+      .hero {
+        min-height: unset;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 0;
+        background-color: #1E2630;
+        background-size: cover;
+        background-position: center top;
+      }
+      .hero-inner { padding: 28px 20px 48px; max-width: 100%; }
+      .trust-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 20px 16px;
+      }
+      .trust-item {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(91,163,201,0.25);
+        border-radius: 10px;
+        padding: 16px 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+      }
+      .trust-text { text-align: center; }
+      .trust-text strong { display: block; font-size: 12px; }
+      .trust-text { font-size: 11px; }
+      section { padding: 64px 18px; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .flow-wrap { grid-template-columns: 1fr; }
+      .flow-step::after { display: none; }
+      .float-bar-info { display: none; }
+      .float-btn-main { font-size: 12px; padding: 12px 14px; }
+      .float-btn-line { font-size: 11px; padding: 12px 12px; }
+      .float-bar { gap: 10px; padding: 12px 16px; }
+      .btn-reserve-main { width: 100%; min-width: unset; font-size: 14px; padding: 12px 20px; }
+      .cta-2btn { flex-direction: column; align-items: stretch; }
+      .btn-line-official { width: 100%; justify-content: center; }
+      .mid-cta-3btn-sub { flex-direction: row; width: 100%; gap: 10px; }
+      .mid-cta-3btn-sub .btn-line-official { flex: 1; width: auto; font-size: 12px; padding: 13px 8px; }
+      .btn-quick { flex: 1; width: auto; font-size: 13px; padding: 14px 8px; }
+      .synergy-box { padding: 28px 20px; }
+      .synergy-connector { flex-direction: column; }
+      .synergy-result { font-size: 15px; padding: 10px 20px; }
+    }
+  </style>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x15g2bxruj");
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    Body<span class="nav-logo-accent">Nate</span>
+    <span class="nav-logo-sub">整体×脂肪冷却 LP</span>
+  </div>
+  <div class="nav-right">
+    <a href="https://lin.ee/scOLL8J" class="nav-cta">LINEで予約</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badges">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        理学療法士在籍
+      </div>
+      <div class="hero-badge ice">
+        <span class="hero-badge-dot"></span>
+        脂肪冷却導入
+      </div>
+      <div class="hero-badge rose">
+        <span class="hero-badge-dot"></span>
+        女性専用サロン
+      </div>
+    </div>
+
+    <h1>
+      <span class="en">Seitai × Fat Cooling — Body Recomposition · Women Only</span>
+      骨格を整え、<br>
+      <span class="ai">脂肪を冷やして</span>、<br>
+      <span class="ar">理想の体型へ。</span>
+    </h1>
+
+    <div class="hero-divider"></div>
+
+    <p class="hero-sub">
+      整体で骨格・姿勢を根本から整え、<br>
+      脂肪冷却で気になる部位をピンポイントにアプローチ。<br>
+      理学療法士が監修する、<strong style="color:rgba(255,255,255,0.85)">新しい体型管理の形</strong>が、ここに。
+    </p>
+
+    <div class="cta-2btn">
+      <a href="https://lin.ee/scOLL8J" class="btn-reserve-main">
+        初回体験 ¥9,900 を<br class="sp-br">今すぐ予約する →
+        <span class="btn-price-sub">整体60分＋脂肪冷却1部位 セット体験</span>
+      </a>
+      <a href="https://lin.ee/scOLL8J" class="btn-line-official">
+        <svg class="line-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.05 2 11.05c0 3.42 2.01 6.41 5.03 8.16-.18.65-.67 2.38-.77 2.74-.12.43.16.43.34.31.14-.09 2.22-1.47 3.12-2.07.73.1 1.48.16 2.28.16 5.52 0 10-4.05 10-9.05C22 6.05 17.52 2 12 2z"/></svg>
+        LINEで相談する
+      </a>
+    </div>
+    <div class="scarcity-wrap">
+      <div class="scarcity-track"><div class="scarcity-fill"></div></div>
+      <p class="scarcity-text">今月のセット体験 残り予約枠 <strong>残り2名</strong>（月4名限定）</p>
+    </div>
+    <p class="no-push-note">★ 勧誘・物販の押し売りは一切ありません</p>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-icon">🎓</div>
+    <div class="trust-text">
+      <strong>理学療法士</strong>国家資格取得
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">❄️</div>
+    <div class="trust-text">
+      <strong>脂肪冷却</strong>最新マシン導入
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">🌸</div>
+    <div class="trust-text">
+      <strong>女性専用</strong>完全プライベート空間
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">📍</div>
+    <div class="trust-text">
+      <strong>阪急烏丸駅</strong>徒歩4分
+    </div>
+  </div>
+</div>
+
+<!-- CONCEPT -->
+<div class="concept-band">
+  <div class="section-inner-sm">
+    <p class="concept-eyebrow">New Approach — Body &amp; Shape</p>
+    <h2 class="concept-title">
+      「痩せたいけど、<br>
+      どこから始めればいい？」<br>
+      <span class="ai">その悩みに、答えを出します。</span>
+    </h2>
+    <p class="concept-body">
+      ダイエットを頑張っても、なぜかお腹や太ももだけが残る。<br>
+      マッサージに通っても、体の歪みは変わらない。<br>
+      そんな「頑張っているのに変わらない」を感じている方へ。<br><br>
+      <strong>BodyNateは整体と脂肪冷却を組み合わせることで、<br>
+      「骨格から整えた上で、脂肪を落とす」という<br>
+      新しいアプローチを提供しています。</strong>
+    </p>
+    <div class="concept-tags">
+      <span class="concept-tag">産後の体型戻し</span>
+      <span class="concept-tag">お腹・太ももの脂肪</span>
+      <span class="concept-tag">姿勢と体型の両立</span>
+      <span class="concept-tag rose-tag">骨盤矯正</span>
+      <span class="concept-tag rose-tag">肩こり・腰痛改善</span>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="philosophy">
+  <p class="philosophy-kana">CONCEPT</p>
+  <p class="philosophy-quote">
+    <span class="ar">整体</span>で体の土台を整え、<br>
+    <span class="ai">脂肪冷却</span>でシルエットを変える。<br>
+    それが BodyNate の答えです。
+  </p>
+  <p class="philosophy-sub">BodyNate 四条烏丸店 — Seitai × Fat Cooling · Women Only</p>
+</div>
+
+<!-- PAIN POINTS -->
+<section class="pain">
+  <div class="section-inner">
+    <p class="eyebrow">Your Trouble</p>
+    <h2 class="section-title">こんなお悩み、<span class="ar">ありませんか？</span></h2>
+    <div class="divider"><div class="divider-gem"></div></div>
+
+    <p class="pain-intro">
+      「食事に気をつけていても、お腹だけ落ちない」<br>
+      「骨盤が歪んでいると言われるけど、何をすればいいか分からない」<br>
+      それぞれ別々に対処しても、なかなか変わらないのには理由があります。
+    </p>
+
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-check"></div>
+        <span class="pain-text">産後から体型が戻らず、お腹や腰まわりが気になる</span>
+      </div>
+      <div class="pain-card ice-card">
+        <div class="pain-check"></div>
+        <span class="pain-text">運動しても落ちない、頑固な脂肪が気になる</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-check"></div>
+        <span class="pain-text">骨盤の歪みや猫背が気になっている</span>
+      </div>
+      <div class="pain-card ice-card">
+        <div class="pain-check"></div>
+        <span class="pain-text">太ももや二の腕など、特定の部位だけ太い</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-check"></div>
+        <span class="pain-text">肩こり・腰痛と体型の両方を一緒に解決したい</span>
+      </div>
+      <div class="pain-card ice-card">
+        <div class="pain-check"></div>
+        <span class="pain-text">針・メス不要で安全に脂肪ケアがしたい</span>
+      </div>
+    </div>
+
+    <div class="pain-answer">
+      <p class="pain-answer-label">THE REASON</p>
+      <p class="pain-answer-text">
+        体型の悩みは「<span class="ar">骨格の歪み</span>」と「<span class="ai">脂肪細胞</span>」、<br>
+        この2つを同時にアプローチしないと<br>根本から変わりません。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-inner">
+    <p class="eyebrow ice">Two Treatments</p>
+    <h2 class="section-title">2つの施術で、<span class="ai">体を内側から変える</span></h2>
+    <div class="divider ice-divider"><div class="divider-gem"></div></div>
+
+    <div class="services-grid">
+      <!-- 整体 -->
+      <div class="service-card">
+        <div class="service-card-img" style="background-image:url('images/seitai.png')">
+          <span class="service-card-badge rose">SEITAI</span>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-sub">TREATMENT 01</div>
+          <h3 class="service-card-title"><span class="ar">整体</span>（骨格・姿勢矯正）</h3>
+          <p class="service-card-text">
+            理学療法士が一人ひとりの骨格・筋膜を丁寧にアセスメント。
+            骨盤・背骨・姿勢を根本から整え、体の歪みによる不調を解消します。
+          </p>
+          <div class="service-card-points">
+            <div class="service-point">
+              <div class="service-point-dot"></div>
+              <span>骨盤・骨格のアライメント矯正</span>
+            </div>
+            <div class="service-point">
+              <div class="service-point-dot"></div>
+              <span>肩こり・腰痛・姿勢改善</span>
+            </div>
+            <div class="service-point">
+              <div class="service-point-dot"></div>
+              <span>産前・産後ケア対応</span>
+            </div>
+            <div class="service-point">
+              <div class="service-point-dot"></div>
+              <span>筋膜リリース×骨格調整の複合アプローチ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 脂肪冷却 -->
+      <div class="service-card">
+        <div class="service-card-img" style="background-image:url('images/reikyaku.jpg')">
+          <span class="service-card-badge ice">FAT COOLING</span>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-sub">TREATMENT 02</div>
+          <h3 class="service-card-title"><span class="ai">脂肪冷却</span>（クライオリポリシス）</h3>
+          <p class="service-card-text">
+            冷却によって脂肪細胞のみを選択的に死滅させ、
+            体が自然に排出する仕組みを利用した非外科的な脂肪減少法。
+            針もメスも不要で、施術後すぐに日常生活に戻れます。
+          </p>
+          <div class="service-card-points">
+            <div class="service-point">
+              <div class="service-point-dot ice"></div>
+              <span>ピンポイントで脂肪細胞にアプローチ</span>
+            </div>
+            <div class="service-point">
+              <div class="service-point-dot ice"></div>
+              <span>お腹・太もも・腰まわりなど部位指定可</span>
+            </div>
+            <div class="service-point">
+              <div class="service-point-dot ice"></div>
+              <span>ダウンタイムなし・施術後すぐ帰宅可</span>
+            </div>
+            <div class="service-point">
+              <div class="service-point-dot ice"></div>
+              <span>施術から2〜3ヶ月で効果が現れる</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SYNERGY -->
+    <div class="synergy-box">
+      <h3 class="synergy-title">
+        なぜ「<span class="ar">整体</span>×<span class="ai">脂肪冷却</span>」を<br>組み合わせるのか？
+      </h3>
+      <div class="synergy-connector">
+        <div class="synergy-pill rose-pill">整体で骨格・姿勢を整える</div>
+        <div class="synergy-plus">×</div>
+        <div class="synergy-pill ice-pill">脂肪冷却で体型を変える</div>
+        <div class="synergy-arrow">→</div>
+        <div class="synergy-result">体の内側から、美しいシルエットへ</div>
+      </div>
+      <p class="synergy-text">
+        骨格が歪んだまま脂肪だけ減らしても、バランスの悪いシルエットのまま。
+        逆に、骨格を整えるだけでは頑固な脂肪は落ちません。<br><br>
+        BodyNateでは、<strong>まず骨格・姿勢を正しいポジションに戻し、
+        そのうえで脂肪冷却で気になる部位にアプローチ</strong>します。
+        この順番で行うことで、体のバランスが整った状態でシルエットを変えられます。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MINI CTA -->
+<div class="mini-cta">
+  <p class="mini-cta-msg">整体×脂肪冷却の<span class="ai">初回セット体験</span>、<br class="sp-br">まずは試してみませんか？</p>
+  <div class="mid-cta-3btn" style="width:100%;max-width:480px;">
+    <a href="https://lin.ee/scOLL8J" class="btn-reserve-main">
+      初回セット体験 ¥9,900 を<br class="sp-br">今すぐ予約する →
+      <span class="btn-price-sub">整体60分＋脂肪冷却1部位（通常¥30,000）</span>
+    </a>
+    <div class="mid-cta-3btn-sub">
+      <a href="https://lin.ee/scOLL8J" class="btn-line-official">
+        <svg class="line-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.05 2 11.05c0 3.42 2.01 6.41 5.03 8.16-.18.65-.67 2.38-.77 2.74-.12.43.16.43.34.31.14-.09 2.22-1.47 3.12-2.07.73.1 1.48.16 2.28.16 5.52 0 10-4.05 10-9.05C22 6.05 17.52 2 12 2z"/></svg>
+        LINEで相談
+      </a>
+      <a href="https://lin.ee/scOLL8J" class="btn-quick">まず話を聞く</a>
+    </div>
+  </div>
+</div>
+
+<!-- APPROACH -->
+<section class="approach">
+  <div class="section-inner">
+    <p class="eyebrow ice">Our Approach</p>
+    <h2 class="section-title">施術の<span class="ai">ステップ</span></h2>
+    <div class="divider ice-divider"><div class="divider-gem"></div></div>
+
+    <div class="approach-steps">
+      <div class="approach-card" style="background-image:url('images/approach-counseling.png')">
+        <span class="approach-step-badge">STEP 01</span>
+        <span class="approach-step-watermark">01</span>
+        <div class="approach-content">
+          <h3 class="approach-title">丁寧な<span class="ar">カウンセリング</span></h3>
+          <p class="approach-desc">体の悩み・目標・生活習慣を丁寧にヒアリング。骨格の状態を確認し、整体と脂肪冷却のどの部位にアプローチするかを一緒に設計します。</p>
+        </div>
+      </div>
+      <div class="approach-connector">
+        <div class="approach-connector-line"></div>
+        <div class="approach-connector-gem"></div>
+        <div class="approach-connector-line"></div>
+      </div>
+      <div class="approach-card" style="background-image:url('images/seitai.png')">
+        <span class="approach-step-badge">STEP 02</span>
+        <span class="approach-step-watermark">02</span>
+        <div class="approach-content">
+          <h3 class="approach-title"><span class="ar">整体</span>で骨格を整える</h3>
+          <p class="approach-desc">理学療法士が骨盤・背骨・筋膜にアプローチ。歪みをリセットし、体を正しいポジションに導きます。まず骨格の土台を整えることで、その後の脂肪冷却の効果も高まります。</p>
+        </div>
+      </div>
+      <div class="approach-connector">
+        <div class="approach-connector-line"></div>
+        <div class="approach-connector-gem"></div>
+        <div class="approach-connector-line"></div>
+      </div>
+      <div class="approach-card" style="background-image:url('images/reikyaku.jpg')">
+        <span class="approach-step-badge ice">STEP 03</span>
+        <span class="approach-step-watermark">03</span>
+        <div class="approach-content">
+          <h3 class="approach-title"><span class="ai">脂肪冷却</span>で部位を絞る</h3>
+          <p class="approach-desc">骨格が整った状態で、気になる部位に脂肪冷却を施術。冷却された脂肪細胞は2〜3ヶ月かけて自然排出されます。ダウンタイムなく、施術後すぐにお帰りいただけます。</p>
+        </div>
+      </div>
+      <div class="approach-connector">
+        <div class="approach-connector-line"></div>
+        <div class="approach-connector-gem"></div>
+        <div class="approach-connector-line"></div>
+      </div>
+      <div class="approach-card" style="background-image:url('images/room.jpg')">
+        <span class="approach-step-badge">STEP 04</span>
+        <span class="approach-step-watermark">04</span>
+        <div class="approach-content">
+          <h3 class="approach-title">セルフケアで<span class="ag">変化を定着</span></h3>
+          <p class="approach-desc">施術後には日常でできるセルフケアをお伝えします。整体と脂肪冷却の効果を持続させるための生活習慣のアドバイスも行い、体の変化を長くキープします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINI CTA 2 -->
+<div class="mini-cta">
+  <p class="mini-cta-msg">このアプローチを、<br>実際の<span class="ai">体で感じて</span>みてください。</p>
+  <div class="mid-cta-3btn" style="width:100%;max-width:480px;">
+    <a href="https://lin.ee/scOLL8J" class="btn-reserve-main">
+      初回セット体験を予約する →
+      <span class="btn-price-sub">¥9,900（税込）/ 整体60分＋脂肪冷却1部位</span>
+    </a>
+    <div class="mid-cta-3btn-sub">
+      <a href="https://lin.ee/scOLL8J" class="btn-line-official">
+        <svg class="line-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.05 2 11.05c0 3.42 2.01 6.41 5.03 8.16-.18.65-.67 2.38-.77 2.74-.12.43.16.43.34.31.14-.09 2.22-1.47 3.12-2.07.73.1 1.48.16 2.28.16 5.52 0 10-4.05 10-9.05C22 6.05 17.52 2 12 2z"/></svg>
+        LINEで相談
+      </a>
+      <a href="https://lin.ee/scOLL8J" class="btn-quick">まず話を聞く</a>
+    </div>
+  </div>
+</div>
+
+<!-- STAFF -->
+<section class="staff">
+  <div class="section-inner">
+    <p class="eyebrow">Therapist</p>
+    <h2 class="section-title">担当セラピスト</h2>
+    <div class="divider"><div class="divider-gem"></div></div>
+
+    <div class="staff-inner">
+      <div class="staff-photo">
+        <div class="staff-photo-bar"></div>
+        <img src="images/chisa.jpg" alt="Chisa" />
+      </div>
+      <div>
+        <div class="staff-license">
+          <div class="staff-license-icon"></div>
+          <span class="staff-license-text">理学療法士 国家資格取得</span>
+        </div>
+        <div class="staff-name">Chisa</div>
+        <div class="staff-tags">
+          <span class="staff-tag">理学療法士</span>
+          <span class="staff-tag">整体</span>
+          <span class="staff-tag ice-tag">脂肪冷却施術</span>
+          <span class="staff-tag">ピラティス指導</span>
+          <span class="staff-tag">産後ケア</span>
+        </div>
+        <div class="staff-message">
+          <span class="quote">
+            「骨格を整えながら、<span class="ar">理想のシルエット</span>へ。<br>
+            一人ひとりに合ったアプローチで、<br>
+            体の内側からの変化をサポートします。」
+          </span>
+          理学療法士（国家資格）・ピラティス指導資格を保有。長年にわたり整形外科クリニックに勤務し、多くの方の回復をサポートしてきました。脂肪冷却と整体を組み合わせた施術で、体型と不調の両面からアプローチします。お一人おひとりの体の状態に寄り添いながら、無理のない変化をお手伝いします。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="voice">
+  <div class="section-inner">
+    <p class="eyebrow ice">Customer Voice</p>
+    <h2 class="section-title">お客様の<span class="ai">声</span></h2>
+    <div class="divider ice-divider"><div class="divider-gem"></div></div>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-tag">産後体型ケア / 整体×脂肪冷却</div>
+        <div class="voice-result">産後のお腹まわりが変わってきました</div>
+        <p class="voice-text">産後から骨盤が歪んでお腹だけ残っていました。整体で骨盤を整えてもらいながら、脂肪冷却でお腹にアプローチ。2ヶ月ほどで明らかにウエストが細くなってきて、産前のパンツが入るようになりました。</p>
+        <p class="voice-meta">30代 女性 / 産後8ヶ月・セット通院中</p>
+      </div>
+
+      <div class="voice-card">
+        <div class="voice-tag">太もも / 整体×脂肪冷却</div>
+        <div class="voice-result">太ももだけ太い悩みが解消されてきました</div>
+        <p class="voice-text">運動しても太ももだけ落ちないと悩んでいました。整体で骨盤の歪みを直してもらい、太ももに脂肪冷却を受けたら3ヶ月で太ももが引き締まってきました。針もメスも使わないので怖くなかったです。</p>
+        <p class="voice-meta">40代 女性 / 会社員・月1〜2回通院</p>
+      </div>
+
+      <div class="voice-card">
+        <div class="voice-tag">姿勢改善 / 整体×脂肪冷却</div>
+        <div class="voice-result">姿勢も体型も同時に変わりました</div>
+        <p class="voice-text">猫背と下腹の脂肪が長年の悩みでした。整体で姿勢が改善されると同時に、脂肪冷却でお腹がすっきりしてきました。同じサロンで両方できるのが便利で、理学療法士が担当してくれるので安心感が違います。</p>
+        <p class="voice-meta">30代 女性 / デスクワーク・継続通院中</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA -->
+<div class="mid-cta">
+  <p class="mid-cta-title">まずは、<span class="ag">¥9,900</span>の初回セット体験から。</p>
+  <p class="mid-cta-sub">
+    気になることを話すだけでも大丈夫。<br>
+    LINEでお気軽にご連絡ください。
+  </p>
+  <div class="mid-cta-3btn">
+    <a href="https://lin.ee/scOLL8J" class="btn-reserve-main">
+      初回セット体験を予約する →
+      <span class="btn-price-sub">¥9,900（税込）/ 整体60分＋脂肪冷却1部位</span>
+    </a>
+    <div class="mid-cta-3btn-sub">
+      <a href="https://lin.ee/scOLL8J" class="btn-line-official">
+        <svg class="line-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.05 2 11.05c0 3.42 2.01 6.41 5.03 8.16-.18.65-.67 2.38-.77 2.74-.12.43.16.43.34.31.14-.09 2.22-1.47 3.12-2.07.73.1 1.48.16 2.28.16 5.52 0 10-4.05 10-9.05C22 6.05 17.52 2 12 2z"/></svg>
+        LINEで相談
+      </a>
+      <a href="https://lin.ee/scOLL8J" class="btn-quick">まず話を聞く</a>
+    </div>
+  </div>
+</div>
+
+<!-- MENU / PRICING -->
+<section class="menu" id="menu">
+  <div class="section-inner">
+    <p class="eyebrow gold">Menu &amp; Price</p>
+    <h2 class="section-title">メニュー・<span class="ag">料金</span></h2>
+    <div class="divider"><div class="divider-gem"></div></div>
+
+    <div class="pricing-grid">
+
+      <!-- ① 整体 初回体験 -->
+      <div class="price-card price-card--trial">
+        <div class="price-card-head">
+          <div class="price-badge">初回限定</div>
+          <div class="price-card-name">整体 初回体験</div>
+          <div class="price-card-time">60分 / カウンセリング込み / 完全個室</div>
+        </div>
+        <div class="price-card-body">
+          <div class="price-orig">通常 ¥10,000</div>
+          <div class="price-main"><sup>¥</sup>4,400<sub>（税込）</sub></div>
+          <p class="price-desc">
+            カウンセリング＋全身整体。<br>
+            骨格・姿勢の状態を確認しながら、<br>
+            あなただけの施術を行います。
+          </p>
+        </div>
+      </div>
+
+      <!-- ② 脂肪冷却 初回体験 -->
+      <div class="price-card price-card--ice">
+        <div class="price-card-head">
+          <div class="price-badge price-badge--ice">初回限定</div>
+          <div class="price-card-name">脂肪冷却 初回体験</div>
+          <div class="price-card-time">1部位 / 約60〜90分 / 完全個室</div>
+        </div>
+        <div class="price-card-body">
+          <div class="price-orig">通常 ¥22,000</div>
+          <div class="price-main"><sup>¥</sup>8,800<sub>（税込）</sub></div>
+          <p class="price-desc">
+            カウンセリング＋脂肪冷却1部位。<br>
+            お腹・太もも・腰まわりなど<br>
+            気になる部位を選んで施術します。
+          </p>
+        </div>
+      </div>
+
+      <!-- ③ セット体験（おすすめ） -->
+      <div class="price-card price-card--set">
+        <div class="price-card-head">
+          <div class="price-badge price-badge--gold">★ おすすめ</div>
+          <div class="price-card-name">整体×脂肪冷却 セット体験</div>
+          <div class="price-card-time">整体60分＋脂肪冷却1部位 / 完全個室</div>
+        </div>
+        <div class="price-card-body">
+          <div class="price-orig">通常 ¥30,000</div>
+          <div class="price-main"><sup>¥</sup>9,900<sub>（税込）</sub></div>
+          <p class="price-desc">
+            整体で骨格を整えた後に脂肪冷却を行う、<br>
+            BodyNate最高の体験コース。<br>
+            同日施術で最大限の効果を。
+          </p>
+          <div class="price-recommend">骨格×脂肪の両面からアプローチ</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 料金CTA -->
+    <div class="mini-cta" style="margin-top:40px; border-radius:6px;">
+      <p class="mini-cta-msg">まずは、<span class="ai">初回セット体験 ¥9,900</span> から<br class="sp-br">お試しください。<br><span style="font-size:14px;font-weight:400;opacity:0.7;">体のことを話すだけでも大丈夫。LINEでお気軽にどうぞ。</span></p>
+      <div class="mid-cta-3btn" style="width:100%;max-width:480px;">
+        <a href="https://lin.ee/scOLL8J" class="btn-reserve-main">
+          初回セット体験を今すぐ予約する →
+          <span class="btn-price-sub">¥9,900（税込）整体60分＋脂肪冷却1部位</span>
+        </a>
+        <div class="mid-cta-3btn-sub">
+          <a href="https://lin.ee/scOLL8J" class="btn-line-official">
+            <svg class="line-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.05 2 11.05c0 3.42 2.01 6.41 5.03 8.16-.18.65-.67 2.38-.77 2.74-.12.43.16.43.34.31.14-.09 2.22-1.47 3.12-2.07.73.1 1.48.16 2.28.16 5.52 0 10-4.05 10-9.05C22 6.05 17.52 2 12 2z"/></svg>
+            LINEで相談
+          </a>
+          <a href="https://lin.ee/scOLL8J" class="btn-quick">まず話を聞く</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="menu-note">
+      ※ 料金はすべて税込。初回の方はカウンセリング料込みです。<br>
+      ※ 脂肪冷却は部位・範囲によって施術時間が変わる場合があります。<br>
+      ※ 2回目以降のメニュー・回数券は初回体験時にご案内いたします。
+    </p>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow">
+  <div class="section-inner-sm">
+    <p class="eyebrow ice">How to Start</p>
+    <h2 class="section-title">予約から<span class="ai">当日</span>まで</h2>
+    <div class="divider ice-divider"><div class="divider-gem"></div></div>
+    <div class="flow-wrap">
+      <div class="flow-step">
+        <div class="flow-num-circle"><span class="flow-num-text">01</span></div>
+        <div class="flow-title">LINEで連絡</div>
+        <p class="flow-desc">気になることを気軽にメッセージ。希望メニューと日時をお伝えください。</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num-circle"><span class="flow-num-text">02</span></div>
+        <div class="flow-title">日程確定</div>
+        <p class="flow-desc">空き状況をお伝えし、一緒に日時を決めます。</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num-circle"><span class="flow-num-text">03</span></div>
+        <div class="flow-title">カウンセリング</div>
+        <p class="flow-desc">お悩み・目標・体の状態を丁寧にヒアリング。施術計画を設計します。</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num-circle"><span class="flow-num-text">04</span></div>
+        <div class="flow-title">整体→脂肪冷却</div>
+        <p class="flow-desc">整体で骨格を整えた後、脂肪冷却を施術。体の変化を実感してください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-inner-sm">
+    <p class="eyebrow ice">FAQ</p>
+    <h2 class="section-title">よくある<span class="ai">ご質問</span></h2>
+    <div class="divider ice-divider"><div class="divider-gem"></div></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><div class="faq-q-badge">Q</div>脂肪冷却は痛くないですか？</div>
+        <div class="faq-a">施術中は冷感と軽い吸引感がありますが、痛みはほとんどありません。施術後に一時的に感覚がなくなることがありますが、徐々に回復します。ダウンタイムもほぼなく、施術直後からお帰りいただけます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><div class="faq-q-badge">Q</div>効果はいつ頃から出てきますか？</div>
+        <div class="faq-a">脂肪冷却の効果は、施術から2〜3ヶ月かけてゆっくりと現れます。冷却によってダメージを受けた脂肪細胞が体内で自然に排出されるためです。整体の効果は施術当日から実感いただける方が多いです。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><div class="faq-q-badge">Q</div>整体と脂肪冷却は同じ日にできますか？</div>
+        <div class="faq-a">はい、同日施術が可能です。むしろ整体で骨格を整えた後に脂肪冷却を行うことで、体がベストな状態での施術が可能です。初回セット体験でぜひ両方を体験してみてください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><div class="faq-q-badge">Q</div>脂肪冷却で選べる部位はどこですか？</div>
+        <div class="faq-a">お腹（上腹・下腹）、太もも（前面・内側）、腰まわり（横腹）、二の腕などに対応しています。ご希望の部位はカウンセリング時に確認し、最適なアプローチをご提案します。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><div class="faq-q-badge">Q</div>産後でも施術を受けられますか？</div>
+        <div class="faq-a">整体は産後ケアに特化したコースもご用意しています。脂肪冷却については産後の状態や授乳状況によってご案内が変わりますので、まずLINEでご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><div class="faq-q-badge">Q</div>勧誘や物販の押し売りはありますか？</div>
+        <div class="faq-a">一切ありません。施術の継続も追加メニューも、すべてお客様のご意志を尊重します。安心してご来院ください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINI CTA 3 -->
+<div class="mini-cta">
+  <p class="mini-cta-msg">疑問は解消できましたか？<br>次は、<span class="ag">実際に体験</span>してみてください。<br>LINEで話すだけでも大丈夫です。</p>
+  <div class="mid-cta-3btn" style="width:100%;max-width:480px;">
+    <a href="https://lin.ee/scOLL8J" class="btn-reserve-main">
+      初回セット体験 ¥9,900 を<br class="sp-br">今すぐ予約する →
+      <span class="btn-price-sub">整体60分＋脂肪冷却1部位（通常¥30,000）</span>
+    </a>
+    <div class="mid-cta-3btn-sub">
+      <a href="https://lin.ee/scOLL8J" class="btn-line-official">
+        <svg class="line-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.05 2 11.05c0 3.42 2.01 6.41 5.03 8.16-.18.65-.67 2.38-.77 2.74-.12.43.16.43.34.31.14-.09 2.22-1.47 3.12-2.07.73.1 1.48.16 2.28.16 5.52 0 10-4.05 10-9.05C22 6.05 17.52 2 12 2z"/></svg>
+        LINEで相談
+      </a>
+      <a href="https://lin.ee/scOLL8J" class="btn-quick">まず話を聞く</a>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CTA -->
+<section class="main-cta">
+  <div class="main-cta-deco"></div>
+  <div class="main-cta-inner">
+    <p class="main-cta-eyebrow">LINE RESERVATION</p>
+    <h2 class="main-cta-title">
+      骨格も、シルエットも、<br>
+      <span class="ai">理想の体</span>へ。<br>
+      <span class="ar">BodyNate</span>がサポートします。
+    </h2>
+    <div class="main-cta-divider"><div class="main-cta-divider-dot"></div></div>
+    <div class="main-cta-price-box">
+      <div class="main-cta-price-label">初回セット体験価格</div>
+      <div class="main-cta-price-orig">通常 ¥30,000</div>
+      <div class="main-cta-arrow">→</div>
+      <div class="main-cta-price-new"><sup>¥</sup>9,900<sub>（税込）</sub></div>
+    </div>
+    <div class="mid-cta-3btn" style="margin-bottom:8px;">
+      <a href="https://lin.ee/scOLL8J" class="btn-reserve-main">
+        初回セット体験 ¥9,900 を<br class="sp-br">今すぐ予約する →
+        <span class="btn-price-sub">整体60分＋脂肪冷却1部位 / 完全個室</span>
+      </a>
+      <div class="mid-cta-3btn-sub">
+        <a href="https://lin.ee/scOLL8J" class="btn-line-official">
+          <svg class="line-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.05 2 11.05c0 3.42 2.01 6.41 5.03 8.16-.18.65-.67 2.38-.77 2.74-.12.43.16.43.34.31.14-.09 2.22-1.47 3.12-2.07.73.1 1.48.16 2.28.16 5.52 0 10-4.05 10-9.05C22 6.05 17.52 2 12 2z"/></svg>
+          LINEで相談
+        </a>
+        <a href="https://lin.ee/scOLL8J" class="btn-quick">まず話を聞く</a>
+      </div>
+    </div>
+    <p class="main-cta-note">
+      友だち追加後にメッセージを送るだけで予約完了。<br>
+      質問・相談だけでも大歓迎です。勧誘は一切ありません。
+    </p>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="access">
+  <div class="section-inner">
+    <p class="eyebrow">Access</p>
+    <h2 class="section-title">アクセス</h2>
+    <div class="divider"><div class="divider-gem"></div></div>
+    <div class="access-grid">
+      <div>
+        <div class="access-name">BodyNate 四条烏丸店</div>
+        <ul class="access-list">
+          <li><span class="al">住所</span><span class="av">〒600-8492<br>京都府京都市下京区四条通新町東入ル月鉾町39-1<br>四条烏丸大西ビル 702号</span></li>
+          <li><span class="al">電話</span><span class="av">070-2475-5207</span></li>
+          <li><span class="al">最寄駅</span><span class="av">阪急烏丸駅 徒歩4分</span></li>
+          <li><span class="al">駐車場</span><span class="av">なし</span></li>
+          <li><span class="al">営業時間</span><span class="av">
+            月・水〜金　9:00 〜 21:00<br>
+            土　　　　　9:00 〜 20:00<br>
+            日　　　　　9:00 〜 19:00<br>
+            定休日：火曜日
+          </span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="access-map">
+          <iframe
+            src="https://maps.google.com/maps?q=BodyNate+四条烏丸店+京都&output=embed&hl=ja"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <a href="https://maps.google.com/maps?q=BodyNate+四条烏丸店+京都" target="_blank" rel="noopener" class="access-map-link">▶ Googleマップで開く</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Body<span>Nate</span></div>
+  <div class="footer-sub">四条烏丸店 — Seitai × Fat Cooling · Women Only</div>
+  <div class="footer-copy">&copy; 2025 BodyNate 四条烏丸店. All rights reserved.</div>
+</footer>
+
+<!-- FLOAT BAR -->
+<div class="float-bar" id="floatBar">
+  <div class="float-bar-info">
+    <div class="float-bar-label">初回セット体験</div>
+    <div class="float-bar-price">¥9,900</div>
+  </div>
+  <a href="https://lin.ee/scOLL8J" class="float-btn-main">今すぐ予約する →</a>
+  <a href="https://lin.ee/scOLL8J" class="float-btn-line">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.05 2 11.05c0 3.42 2.01 6.41 5.03 8.16-.18.65-.67 2.38-.77 2.74-.12.43.16.43.34.31.14-.09 2.22-1.47 3.12-2.07.73.1 1.48.16 2.28.16 5.52 0 10-4.05 10-9.05C22 6.05 17.52 2 12 2z"/></svg>
+    LINEで予約
+  </a>
+</div>
+
+<script>
+  const bar = document.getElementById('floatBar');
+  window.addEventListener('scroll', () => {
+    bar.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+</script>
+
+</body>
+</html>
